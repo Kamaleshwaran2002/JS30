@@ -1,0 +1,36 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.cell{
+    height: 75px;
+    width: 75px;
+    border: 2px solid;
+    box-shadow: 0px 0px 0px 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.cellcontainers{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin: auto; */
+}
+
+
+#gameContainer{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px;
+}
