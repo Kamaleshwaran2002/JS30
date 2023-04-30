@@ -25,6 +25,7 @@ let running = false
 
 intializeGame()
 function intializeGame(){
+
     cell.forEach(cell => cell.addEventListener("click", cellClicked))
     restartBtn.addEventListener("click", restartGame)
     statusText.textContent = `${currentPlayer}'s turn` 
@@ -42,7 +43,7 @@ function cellClicked(){
     }
 
     updateCell(this,cellIndex)
-    changePlayer()
+    // changePlayer()
     checkWinner()
     
 }
@@ -59,7 +60,37 @@ function changePlayer(){
 }
 
 function checkWinner(){
-    console.log("checkwinner")
+    // console.log("checkwinner")
+    let roundWon = false
+
+    for(i=0; i<winConditions.length; i++){
+        const condition = winConditions[i]
+
+        const cellA = options[condition[0]]
+        const cellB = options[condition[1]]
+        const cellC = options[condition[2]]
+
+        if(cellA =="" || cellB =="" || cellC ==""){
+            continue
+        }
+        if(cellA == cellB && cellB == cellC){
+            roundWon = true
+            break
+        }
+
+    }
+
+    if(roundWon){
+        statusText.textContent = `${currentPlayer}'s wins!`
+        running = false
+    }
+    else if(!options.includes("")){
+        statusText.textContent = `Draw!`
+        running = false
+    }
+    else{
+        changePlayer()
+    }
 
 }
 
