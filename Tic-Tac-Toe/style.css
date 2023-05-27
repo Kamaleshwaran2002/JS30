@@ -7,7 +7,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin-top: 150px;
+    background-color: black;
 }
 
 .cell{
@@ -28,8 +30,18 @@ body{
     /* margin: auto; */
 }
 
+.foot{
+    margin-top: 200px;
+    width: 750px;
+    height: 20px;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+}
+
 
 #gameContainer{
+    background: white;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     width: 750px;
@@ -44,4 +56,19 @@ body{
     align-items: center;
     flex-direction: row;
     margin: 20px;
+}
+
+#restartBtn{
+    width:100px ;
+    align-items: center;
+    margin: 20px;
+    padding: 15px;
+    font-size: larger;
+    font-weight: 600;
+    line-height: 10px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    background: black;
+
 }
