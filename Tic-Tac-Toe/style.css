@@ -30,14 +30,14 @@ body{
     /* margin: auto; */
 }
 
-.foot{
+/* .foot{
     margin-top: 200px;
     width: 750px;
     height: 20px;
     border: 1px solid black;
     color: white;
     text-align: center;
-}
+} */
 
 
 #gameContainer{
@@ -48,6 +48,7 @@ body{
     height: 500px;
     border: 2px solid;
     padding: 50px;
+    /* border: 10px solid red; */
 
 }
 #container{
@@ -71,4 +72,21 @@ body{
     color: white;
     background: black;
 
+}
+
+@media (max-width:500px) and (min-width:300px){
+    body{
+        margin: 20px;
+    }
+
+    .cell{
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        font-size: 35px;
+    }
+    #gameContainer{
+        width: 400px;
+        height: 400px;
+    }
 }
